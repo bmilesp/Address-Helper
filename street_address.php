@@ -1,5 +1,5 @@
 <?php
-class addressHelper extends Helper {
+class StreetAddressHelper extends Helper {
 	/*
 		Returns the array of each element of a street address, into the categories:
 		property_address  (or house number)
@@ -59,12 +59,13 @@ class addressHelper extends Helper {
 			'Terrace'=>'Ter'
 		 );
 
-	function parse_address($address=null, $type=1){
-			
-		
-			
-			
-		    	
+	/**
+	 * returns an array of street address components
+	 * 
+	 * @param unknown_type $address
+	 * @param unknown_type $type
+	 */
+	function parse($address=null, $type=1){	    	
 		switch($type){
 	
 			case 1: // 1 =  address type (i.e. house number  direction  street unit)
